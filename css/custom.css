@@ -1,9 +1,9 @@
 body, html {
-	padding: 0;
-	margin: 0;
-	position: relative;
-	height: 100%;
-	font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*
@@ -11,47 +11,47 @@ Navigation bar
 */
 
 .NavigationBar {
-	z-index: 1;
-	width: 100%;
-	position: absolute;
-	box-sizing: border-box;
-	overflow: auto;
-	background-color: rgba(255,255,255,0.0);
-	transition: background-color 200ms;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    overflow: auto;
+    background-color: rgba(255,255,255,0.0);
+    transition: background-color 200ms;
 }
 .NavigationBar:hover {
-	background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.2);
 }
 .NavigationItem {
-	height: 100%;
-	position: relative;
-	box-sizing: border-box;
-	padding: 5px 10px;
-	font-size: 18px;
-	transition: background-color 200ms;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: 18px;
+    transition: background-color 200ms;
 }
 .NavigationItem:hover {
-	background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.2);
 }
 .NavigationItemLeft {
-	float: left;
+    float: left;
 }
 .NavigationItemRight {
-	float: right;
+    float: right;
 }
 .NavigationLinkContainer {
-	border-radius: 5px;
-	padding: 5px 10px;	
+    border-radius: 5px;
+    padding: 5px 10px;  
 }
 .NavigationLink {
-	position: relative;
-	box-sizing: border-box;
-	overflow: visible;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
 }
 .NavigationContent {
-	position: relative;
-	text-decoration: none;
-	color: #192a56;
+    position: relative;
+    text-decoration: none;
+    color: #192a56;
 }
 
 
@@ -60,26 +60,25 @@ Header section
 */
 
 .HeaderWrapper {
-	position: relative;
-	width: 100%;
-	height: 600px;
-	max-height: 80%;
-	box-sizing: border-box;
-	background-color: #00a8ff;
-	background-image: url('../img/pentagon.png');
-	background-repeat: repeat;
-	background-position: center;
+    position: relative;
+    width: 100%;
+    height: 600px;
+    max-height: 80%;
+    box-sizing: border-box;
+    background-image: url('../img/pentagon.png');
+    background-repeat: repeat;
+    background-position: center;
 }
 
 .HeaderContent {
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	width: 400px;
-	padding: 40px;
-	max-width: 100%;
-	box-sizing: border-box;
-	transform: translate(-50%, -50%);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
 }
 
 /*
@@ -116,19 +115,19 @@ On-load header animations
 }
 
 .HeaderTitle {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 42px;
-	display: inline-block;
-	color: #192a56;
-	margin-bottom: 5px;
-	animation: 1000ms ease-out 0s 1 fadeIn1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 42px;
+    display: inline-block;
+    color: #192a56;
+    margin-bottom: 5px;
+    animation: 1000ms ease-out 0s 1 fadeIn1;
 }
 .HeaderSubtitle {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	display: inline-block;
-	color: #192a56;
-	animation: 1000ms ease-out 0s 1 fadeIn2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    color: #192a56;
+    animation: 1000ms ease-out 0s 1 fadeIn2;
 }
 
 /*
@@ -136,79 +135,152 @@ Triangular arrow punch-out at the bottom of the header
 */
 
 .HeaderBottom {
-	position: absolute;
-	bottom: 0;
-	height: 40px;
-	width: 100%;
-	overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    overflow: hidden;
 }
 .HeaderBottomRectangle {
-	position: absolute;
-	width: 80px;
-	height: 100%;
-	left: 10%;
+    position: absolute;
+    width: 80px;
+    height: 100%;
+    left: 10%;
 }
 .HeaderBottomLeftRectangle {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	left: 10%;
-	background-color: #fff;
-	transform: translateX(-100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 10%;
+    background-color: #fff;
+    transform: translateX(-100%);
 }
 .HeaderBottomRightRectangle {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	transform: translateX(80px);
-	left: 10%;
-	background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(80px);
+    left: 10%;
+    background-color: #fff;
 }
 .HeaderBottom.Dark .HeaderBottomRightRectangle,
 .HeaderBottom.Dark .HeaderBottomLeftRectangle {
-	background-color: #f7f7f7;
+    background-color: #f7f7f7;
 }
 .HeaderBottomTriangleLeft {
-	left: 0;
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 40px 0 0 40px;
-	border-color: transparent transparent transparent #fff;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 0 0 40px;
+    border-color: transparent transparent transparent #fff;
 }
 .HeaderBottom.Dark .HeaderBottomTriangleLeft {
-	border-color: transparent transparent transparent #f7f7f7;
+    border-color: transparent transparent transparent #f7f7f7;
 }
 .HeaderBottomTriangleRight {
-	right: 0;
-	position: absolute;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 0 40px 40px;
-	border-color: transparent transparent #fff transparent;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 40px 40px;
+    border-color: transparent transparent #fff transparent;
 }
 .HeaderBottom.Dark .HeaderBottomTriangleRight {
-	border-color: transparent transparent #f7f7f7 transparent;
+    border-color: transparent transparent #f7f7f7 transparent;
 }
+
+
 
 
 
 .AboutMe {
-	position: relative;
-	width: 100%;
-	height: 400px;
-	margin-bottom: 100px;
-	background-color: #fff;
-	background-image: url('../img/tic-tac-toe.png');
-	background-repeat: repeat;
-	background-position: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 100px;
+    background-color: #fff;
+    background-image: url('../img/tic-tac-toe.png');
+    background-repeat: repeat;
+    background-position: center;
 }
+.SectionHeader {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 20px;
+    text-align: left;
+    font-size: 26px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.SectionWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 820px;
+    box-sizing: border-box;
+    padding: 0 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.SectionContainer {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.Section {
+    position: relative;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+.Section.SectionSmall {
+    width: 40%;
+}
+.Section.SectionLarge {
+    width: 60%;
+    padding-bottom: 60px;
+}
+.SectionTitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    font-weight: 300;
+    font-size: 32px;
+    color: #192a56;
+}
+.SectionSubtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: #192a56;
+    opacity: 0.3;
+    font-size: 14px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.SectionText {
+    margin-top: 10px;
+}
+.Face {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .BackgroundFade {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background-image: linear-gradient(#fff, transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#fff, transparent);
 }
 
