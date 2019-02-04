@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
 
     <!-- meta tags -->
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta charset="utf-8">
 
     <!-- title -->
     <title>Aidan Bauer - Web Portfolio</title>
@@ -16,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/custom.css">
 
     <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto|Roboto+Condensed:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300%7CRoboto%7CRoboto+Condensed:300" rel="stylesheet">
 
     <!-- font awesome icons -->
     <link rel="stylesheet" href="font-awesome/css/fontawesome-pro-light.css">
@@ -34,6 +35,20 @@
 <!-- navbar -->
 <nav class="NavigationBar">
   <div class="NavigationItem NavigationItemLeft">
+  </div>
+  <div class="NavigationItem NavigationItemRight">
+    <div class="NavigationLinkContainer">
+      <div class="NavigationLink">
+        <a href="https://www.linkedin.com/in/aidanbauer/" class="NavigationContent">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="NavigationItem NavigationItemRight">
+    <div class="NavigationLinkContainer">
+      <div class="NavigationLink">
+        <a href="https://github.com/baueraidan" class="NavigationContent">GitHub</a>
+      </div>
+    </div>
   </div>
   <div class="NavigationItem NavigationItemRight">
     <div class="NavigationLinkContainer">
@@ -73,18 +88,13 @@
   </div>
 </div>
 
-<div class="AboutMe">
+<!-- about me -->
+<div class="SectionOuter AboutMe">
   <div class="BackgroundFade"></div>
-  <!--
-  <div class="SectionHeader">
-    About Me
-  </div>
-  -->
-
   <div class="SectionWrapper">
-    <div class="SectionContainer">
+    <div class="SectionContainer SectionContainerLeftFirst">
       <div class="Section SectionSmall">
-        <img class="Face" src="img/face.png" />
+        <img class="Face" src="img/face.png" alt="Aidan Bauer"/>
       </div>
       <div class="Section SectionLarge">
         <div class="SectionTitle">
@@ -94,15 +104,14 @@
           Subtitle
         </div>
         <div class="SectionText">
-          Hexel was my first published project. Your goal is simple: trade up through the rainbow to reach the black dot. Swipe to combine and move the dots around inside of the hexagon. The game ends when you run out of room inside of the hexagon and no more dots can be combined. 
+          Hello 
         </div>
         <div class="SectionText">
-          Although the objective is simple and the mechanics are easy to learn, your moves require progressively more care and forethought as the board begins to fill up.
+          World
         </div>
       </div>
     </div>
   </div>
-
 
   <div class="HeaderBottom">
     <div class="HeaderBottomLeftRectangle">
@@ -114,6 +123,103 @@
     <div class="HeaderBottomRightRectangle">
     </div>
   </div>
+</div>
+
+<!-- hexel -->
+<div class="SectionOuter">
+  <div class="SectionWrapper">
+    <div class="SectionContainer SectionContainerRightFirst">
+      <div class="Section SectionSmall SectionStackable">
+        <div class="DeviceMockupWrapper">
+          <div class="DeviceMockup">
+            <video loop autoplay muted playsinline>
+              <source src="mov/hexel.mp4">
+              <img src="mov/hexel.png" alt="Hexel">
+            </video>
+          </div>
+          <div class="DeviceMockupFade"></div>
+        </div>
+      </div>
+      <div class="Section SectionLarge SectionStackable">
+        <div class="SectionTitle">
+          Hexel
+        </div>
+        <div class="SectionSubtitle">
+          A puzzle game about connecting and combining colorful dots
+        </div>
+        <div class="SectionText">
+          Hexel was my first published project. Your goal is simple: trade up through the rainbow to reach the black dot. Swipe to combine and move the dots around inside of the hexagon. The game ends when you run out of room inside of the hexagon and no more dots can be combined. 
+        </div>
+        <div class="SectionText">
+          Although the objective is simple and the mechanics are easy to learn, your moves require progressively more care and forethought as the board begins to fill up.
+        </div>
+        <div class="ButtonWrapper">
+          <a href="https://google.com">
+            Website
+          </a>
+          <a href="https://google.com">
+            iOS App
+          </a>
+          <a href="https://google.com">
+            Android App
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- hexel -->
+<div class="SectionOuter">
+  <div class="SectionWrapper">
+    <div class="SectionContainer SectionContainerLeftFirst">
+      <div class="Section SectionSmall SectionStackable">
+        <div class="DeviceMockupWrapper">
+          <div class="DeviceMockup">
+            <video loop autoplay muted playsinline>
+              <source src="mov/hexel.mp4">
+              <img src="mov/hexel.png" alt="Hexel">
+            </video>
+          </div>
+          <div class="DeviceMockupFade"></div>
+        </div>
+      </div>
+      <div class="Section SectionLarge SectionStackable">
+        <div class="SectionTitle">
+          Hexel
+        </div>
+        <div class="SectionSubtitle">
+          A puzzle game about connecting and combining colorful dots
+        </div>
+        <div class="SectionText">
+          Hexel was my first published project. Your goal is simple: trade up through the rainbow to reach the black dot. Swipe to combine and move the dots around inside of the hexagon. The game ends when you run out of room inside of the hexagon and no more dots can be combined. 
+        </div>
+        <div class="SectionText">
+          Although the objective is simple and the mechanics are easy to learn, your moves require progressively more care and forethought as the board begins to fill up.
+        </div>
+        <div class="ButtonWrapper">
+          <a href="https://google.com">
+            Website
+          </a>
+          <a href="https://google.com">
+            iOS App
+          </a>
+          <a href="https://google.com">
+            Android App
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- footer -->
+<div class="Footer">
+  Made with 
+  <i class="far fa-heart"></i> 
+  by
+  <a href="">Aidan Bauer</a>
+  in Boston, MA
 </div>
 
   </body>
