@@ -1,9 +1,21 @@
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
 body, html {
     padding: 0;
     margin: 0;
     position: relative;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -266,25 +278,8 @@ Triangular arrow punch-out at the bottom of the header
     width: 60%;
 }
 
-@media only screen and (max-width: 600px) {
-    .Section.SectionStackable {
-        width: 100%;
-    }
-    .Section.SectionLarge {
-        padding: 30px 30px 60px 30px;
-        width: 60%;
-    }
-    .DeviceMockup {
-        width: 70% !important;
-        left: 15% !important;
-    }
-    .NavigationItem {
-        font-size: 14px !important;
-    }
-    .Footer {
-        font-size: 14px !important;
-    }
-}
+
+
 
 .ButtonWrapper {
     text-align: center;
@@ -354,12 +349,13 @@ Triangular arrow punch-out at the bottom of the header
     overflow: hidden;
     box-shadow: 0 5px 30px #DEE1E4;
 }
-.DeviceMockupFade {
+.BottomFade {
     position: absolute;
     bottom: 0;
-    height: 30px;
+    height: 10px;
     width: 100%;
     box-sizing: border-box;
+    background-image: linear-gradient(rgba(255,255,255,0), #fff);
 }
 .DeviceMockup video {
     object-fit: fill;
@@ -394,9 +390,143 @@ Footer
     padding: 30px 25px;
     font-size: 16px;
 }
+.FooterFixed {
+    position: fixed;
+    bottom: 0;
+}
 .Footer a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+}
+
+
+
+/*
+Resume
+*/
+
+.ResumeWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    box-sizing: border-box;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 100px 10px;
+}
+.ResumeContainer {
+    box-sizing: border-box;
+}
+.ResumeRow {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+.ResumeColumn {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    padding: 5px 25px;
+}
+.ResumeColumnLeft {
+    width: 65%;
+}
+.ResumeColumnRight {
+    width: 35%;
+}
+.ResumeName {
+    font-size: 42px;
+    color: #192a56;
+}
+.ResumePosition {
+    color: #192a56;
+    opacity: 0.5;
+    margin-bottom: 3px;
+}
+.ResumeText {
+    margin-bottom: 5px;
+}
+.ResumeLink {
+    font-weight: 400;
+    color: #2079C7;
+}
+.ResumeSection {
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-top: 35px;
+    color: #283C75;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.ResumeTitle {
+    margin-top: 25px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.ResumeTitleBold {
+    font-weight: 400;
+    color: #2079C7;
+}
+.ResumeDate {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #192a56;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.ResumeList {
+    font-size: 16px;
+    opacity: 0.8;
+}
+.ResumeSkill {
+    overflow: auto;
+    margin-bottom: 2px;
+}
+.ResumeSkillName {
+    float: left;
+    color: #192a56;
+}
+.ResumeSkillLevel {
+    float: right;
+}
+.ResumeSkillLevelDark {
+    color: #2079C7;
+}
+.ResumeSkillLevelLight {
+    color: #192a56;
+    opacity: 0.3;
+}
+
+/*
+Media queries
+*/
+
+@media only screen and (max-width: 600px) {
+    .Section.SectionStackable {
+        width: 100%;
+    }
+    .Section.SectionLarge {
+        padding: 30px 30px 60px 30px;
+        width: 60%;
+    }
+    .DeviceMockup {
+        width: 70%;
+        left: 15%;
+    }
+    .NavigationItem {
+        font-size: 14px !important;
+    }
+    .Footer {
+        font-size: 14px !important;
+    }
+    .ResumeColumnLeft {
+        width: 100%;
+    }
+    .ResumeColumnRight {
+        width: 100%;
+    }
 }
 
