@@ -509,7 +509,7 @@ Media queries
         width: 100%;
     }
     .Section.SectionLarge {
-        padding: 30px 30px 60px 30px;
+        padding: 30px 30px 80px 30px;
         width: 60%;
     }
     .DeviceMockup {
