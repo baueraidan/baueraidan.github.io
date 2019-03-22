@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta charset="UTF-8">
+    <title>Mandelbrot Set</title>
+
+    <!-- SEO meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Explore the endless Mandelbrot Set fractal!">
+    <meta name="keywords" content="mandelbrot, explore, simulation, visualization">
+    <meta name="author" content="Aidan Bauer">
+
+    <!-- open graphs meta tags -->
+    <meta property="og:url" content="http://aidanbauer.me/mandelbrot/" />
+    <meta property="og:title" content="Mandelbrot Set" />
+    <meta property="og:description" content="Explore the endless Mandelbrot Set fractal!" />
+    <meta property="og:image" content="http://aidanbauer.me/mandelbrot/image.png" />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mandelbrot Set">
+    <meta name="twitter:description" content="Explore the endless Mandelbrot Set fractal!">
+    <meta name="twitter:image" content="http://aidanbauer.me/mandelbrot/image.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- js -->
+		<script defer type="text/javascript" src="js/anim.js"></script>
+    <script defer type="text/javascript" src="js/essential.js"></script>
+    <script defer type="text/javascript" src="js/functions.js"></script>
+    <script defer type="text/javascript" src="js/canvas.js"></script>
+    <script defer type="text/javascript" src="js/global.js"></script>
+    <script defer type="text/javascript" src="js/resize.js"></script>
+    <script defer type="text/javascript" src="js/input.js"></script>
+    <script defer type="text/javascript" src="js/load.js"></script>
+    <script defer type="text/javascript" src="js/touch.js"></script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i" rel="stylesheet">
+
+    <link rel="apple-touch-icon" href="9.png">
+
+    <style>
+
+/*
+GLOBAL
+*/
+
+@-ms-viewport{
+  width: device-width;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  background-color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+canvas {
+  z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX( -50% ) translateY( -50% );
+  transform: translateX( -50% ) translateY( -50% );
+}
+
+#load {
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  height: 5px;
+  background-color: #fff;
+  -webkit-transform: translateY( 0 );
+  transform: translateY( 0 );
+  -webkit-transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+}
+
+
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+#reminder {
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba( 255, 255, 255, 0.8 );
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0;
+  animation: bounce 2000ms infinite;
+  transition: opacity 1000ms;
+}
+
+#maximum {
+  z-index: 2;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: rgba( 255, 255, 255, 0.8 );
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.zoom {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 3;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  color: #fff;
+  background-color: rgba( 255, 255, 255, 0.0 );
+  opacity: 0;
+  transition: opacity 400ms;
+}
+.zoom:hover {
+  border-width: 0;
+  color: #000;
+  background-color: #fff;
+}
+
+.zoom-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 28px;
+  transform: translateX( -50% ) translateY( -50% );
+}
+#zoom-in {
+  position: absolute;
+  bottom: 15px;
+  right: 65px;
+}
+#zoom-out {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+    </style>
+    
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102589223-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-102589223-3');
+</script>
+    
+  </head>
+  <body>
+
+<div id="load"></div>
+
+<div id="reminder">click and drag to zoom in</div>
+
+<div id="maximum">that's as far as you can zoom in</div>
+
+<div class="zoom" id="zoom-in">
+  <div class="zoom-label">&plus;</div>
+</div>
+<div class="zoom" id="zoom-out">
+  <div class="zoom-label">&minus;</div>
+</div>
+
+  </body>
+</html>
+
+

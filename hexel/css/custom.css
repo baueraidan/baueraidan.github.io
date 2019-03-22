@@ -1,0 +1,255 @@
+
+
+
+/*
+GLOBAL
+*/
+
+html, body {
+  height: 100%;
+}
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+
+/*
+CANVAS
+*/
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: filter 2000ms;
+}
+
+
+
+/*
+BOTTOM-RIGHT BUTTONS
+*/
+
+.button-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: right;
+  z-index: 1;
+}
+.button-container {
+  position: relative;
+  margin: 0 10px;
+  display: inline-block;
+  overflow: auto;
+  display: block;
+  float: right;
+}
+.button-outer {
+  position: relative;
+  float: left;
+}
+.button {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  color: #2c3e50;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 21px;
+}
+.icon-svg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  z-index: -1;
+}
+.button-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#restart {
+  transform: rotate( 0deg );
+  transition: transform 600ms;
+}
+#sound {
+  transform-origin: top center;
+  transform: rotate( 0deg );
+  transition: transform 150ms;
+}
+#color-blind {
+  transform-origin: center center;
+  transform: rotate( 0deg );
+  transition: transform 150ms;
+}
+
+
+
+/*
+BOTTOM-RIGHT ICON APPEARANCES
+*/
+
+.icon-svg#icon-restart {
+  background-image: url(../svg/restart.svg);
+}
+.icon-svg#icon-eye {
+  background-image: url(../svg/eye.svg);
+}
+.icon-svg#icon-eye-cross {
+  background-image: url(../svg/eye-cross.svg);
+}
+.icon-svg#icon-bell {
+  background-image: url(../svg/bell.svg);
+}
+.icon-svg#icon-bell-cross {
+  background-image: url(../svg/bell-cross.svg);
+}
+
+
+
+/*
+SOCIAL BUTTONS
+*/
+
+#social {
+  position: absolute;
+  text-align: left;
+}
+
+
+
+/*
+TITLE
+*/
+
+#title {
+  font-size: 42px;
+  font-family: 'Open Sans', sans-serif;
+  color: #2c3e50;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/*
+ADS
+*/
+
+#ad-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+
+/*
+OVERLAYS
+*/
+
+#overlay-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate( -50%, -50% );
+  overflow: hidden;
+  perspective: 500px;
+}
+#overlay-blocker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: top center;
+  text-align: center;
+  z-index: 1;
+}
+.overlay {
+  position: absolute;
+  top: -15%;
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba( 255, 255, 255, .8 );
+  transform-origin: top center;
+  text-align: center;
+  transition: 2000ms;
+}
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  transform: translate( -50%, -50% );
+}
+.overlay-title {
+  position: relative;
+  font-size: 48px; /* this */
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-family: 'Open Sans', sans-serif;
+  color: #141414;
+}
+.overlay-subtitle {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  opacity: .7;
+  font-size: 16px;
+}
+.overlay-button-wrapper {
+  margin-top: 48px; /* this */
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+.overlay-button {
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  font-size: 20px; /* this */
+  display: inline-block;
+  border: 1px solid #141414;
+  color: #141414;
+  padding: 3px 20px 4px; /* this */
+  margin: 0 4px; /* this */
+  border-radius: 8px; /* this */
+  background-color: rgba( 255, 255, 255, .5 );
+  transition: background-color 100ms,
+    color 100ms;
+}
+.overlay-button:hover {
+  color: #fff;
+  background-color: #141414;
+}
+
+

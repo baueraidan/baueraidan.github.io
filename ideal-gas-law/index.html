@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <title>Ideal Gas Law Simulation</title>
+    <meta name="description" content="Description">
+    <meta name="author" content="Aidan Bauer">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- threejs -->
+    <script src="threejs/three.js"></script>
+    <script src="threejs/OrbitControls.js"></script>
+
+    <!-- js -->
+    <script src="js/global.js"></script>
+    <script src="js/anim.js"></script>
+    <script src="js/draw.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+    
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+#options {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 20px;
+    color: lightgray;
+}
+.label {
+    position: relative;
+    display: block;
+    margin-top: 3px;
+}
+
+    </style>
+
+  </head>
+  
+  <body>
+
+<div id="options">
+    <span class="label">
+        <b>Volume:</b>
+        <span id="volume-value"></span>
+    </span>
+    <input type="range" min="1000" max="10000" value="3000" id="volume-range">
+    <br>
+    <span class="label">
+        <b>Particles:</b>
+        <span id="particles-value"></span>
+    </span>
+    <input type="range" min="10" max="100" value="60" id="particles-range">
+    <br>
+    <span class="label">
+        <b>Temperature:</b>
+        <span id="temperature-value"></span>
+    </span>
+    <input type="range" min="10" max="10000" value="2000" id="temperature-range">
+    <span class="label">
+        <b>Pressure:</b>
+        <span id="pressure-value"></span>
+    </span>
+</div>
+
+  </body>
+
+</html>

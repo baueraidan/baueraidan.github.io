@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+    <title>Electron Orbital Visualization</title>
+    <meta name="description" content="This visualization solves the Schrödinger wave equations for a hydrogen atom to visualize electron orbitals.">
+    <meta name="author" content="Aidan Bauer">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- threejs -->
+    <script src="threejs/three.js"></script>
+    <script src="threejs/OrbitControls.js"></script>
+
+    <!-- js -->
+    <script src="js/draw.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+
+#settings {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 320px;
+}
+
+div, select {
+    top: 0;
+    display: inline-block;
+    font-size: 11px;
+}
+div {
+    font-size: 11px;
+    margin-right: 2px;
+}
+select {
+    font-size: 11px;
+    margin-right: 10px;
+    border: none;
+}
+button {
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+    </style>
+
+  </head>
+  
+  <body>
+
+<div id="settings">
+
+    <div>Orbital:</div>
+
+    <!-- quantum numbers -->
+    <select id="orbital">
+      <option value="100">100</option>
+      <option value="200">200</option>
+      <option value="210">210</option>
+      <option value="211">211</option>
+      <option value="300">300</option>
+      <option value="310">310</option>
+      <option value="311">311</option>
+      <option value="320">320</option>
+      <option value="321">321</option>
+      <option value="322">322</option>
+    </select>
+
+    <div>Material:</div>
+
+    <!-- material -->
+    <select id="material">
+      <option value="normal">Normal</option>
+      <option value="wireframe">Wireframe</option>
+      <option value="points">Point Cloud</option>
+    </select>
+
+    <div>Detail:</div>
+
+    <!-- detail -->
+    <select id="detail">
+      <option value="low">Low</option>
+      <option value="medium" selected="selected">Medium</option>
+      <option value="high">High</option>
+    </select>
+
+    <div id="loading"></div>
+
+</div>
+
+  </body>
+
+</html>

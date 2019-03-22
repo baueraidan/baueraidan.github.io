@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>Traveling Salesman</title>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/icons.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+    <!-- js -->
+    <script defer type="text/javascript" src="js/canvas.js"></script>
+    <script defer type="text/javascript" src="js/easing.js"></script>
+    <script defer type="text/javascript" src="js/essential.js"></script>
+    <script defer type="text/javascript" src="js/functions.js"></script>
+    <script defer type="text/javascript" src="js/draw.js"></script>
+    <script defer type="text/javascript" src="js/global.js"></script>
+    <script defer type="text/javascript" src="js/resize.js"></script>
+    <script defer type="text/javascript" src="js/anim.js"></script>
+    <script defer type="text/javascript" src="js/presets.js"></script>
+    <script defer type="text/javascript" src="js/load.js"></script>
+    <script defer type="text/javascript" src="js/input.js"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Roboto" rel="stylesheet">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-102589223-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-102589223-4');
+</script>
+
+  </head>
+  <body>
+
+<!--<div id="debug"></div>-->
+
+<div id="column">
+
+  <div id="column-inner">
+
+    <div class="label">generate random points</div>
+    <div class="slider">
+      <div class="slider-label">
+        <input type="tel" id="text-points" value="100" placeholder="100">
+        <span>points</span>
+      </div>
+      <input id="range-points" type="range" min="3" max="500" value="100" step="1">
+    </div>
+    <button id="generate"><i class="check"></i>Generate</button>
+
+    <div class="label">load preset</div>
+    <div class="select-wrapper">
+      <select id="preset">
+      </select>
+      <div class="select-arrow">
+        <i class="bars"></i>
+      </div>
+    </div>
+    <button id="load"><i class="spinner"></i>Load</button>
+
+    <div class="label">animation speed</div>
+    <div class="slider">
+      <div class="slider-label">
+        <input type="tel" id="text-anim" value="300" placeholder="300">
+        <span>ms</span>
+      </div>
+      <input id="range-anim" type="range" min="0" max="1000" step="1" value="300">
+    </div>
+
+    <div id="button-wrapper">
+      <button id="run"><i class="forward"></i>Run</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div id="overlay"></div>
+
+
+<div id="header">
+  <div id="title">
+    Traveling Salesman Problem
+  </div>
+  <div id="sub-title">
+    The goal of the Traveling Salesman Problem is to find the shortest route that connects every point.
+  </div>
+</div>
+
+
+<canvas id="canvas"></canvas>
+
+<a href="http://aidanbauer.me">
+  <div id="copyright">
+    <i class="copyright"></i> Aidan Bauer
+  </div>
+</a>
+
+<a href="http://aidanbauer.me">
+  <div id="work" style="display: none;">
+    <i class="code"></i> My Work
+  </div>
+</a>
+
+
+<div id="options">
+  <i class="sliders"></i> Options
+</div>
+
+<div id="loading">
+  <i class="circle-o-notch spin"></i>
+</div>
+
+
+  </body>
+</html>
+
+
