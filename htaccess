@@ -1,7 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^hexel\.co$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.hexel\.co$
-RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
-RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-RewriteRule ^/?$ "http\:\/\/aidanbauer\.me\/hexel" [R=301,L]
-RewriteRule ^index.html /portfolio [R=301]
