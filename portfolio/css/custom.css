@@ -59,7 +59,7 @@ Navigation bar
 }
 .NavigationLinkContainer {
     border-radius: 5px;
-    padding: 5px 10px;  
+    padding: 5px 10px;
 }
 .NavigationLink {
     position: relative;
@@ -134,17 +134,19 @@ On-load header animations
 
 .HeaderTitle {
     font-family: 'Open Sans', sans-serif;
-    font-size: 42px;
+    font-size: 46px;
     display: inline-block;
-    color: #192a56;
+    color: #000;
     margin-bottom: 5px;
     animation: 1000ms ease-out 0s 1 fadeIn1;
 }
 .HeaderSubtitle {
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 16px;
     display: inline-block;
-    color: #192a56;
+    color: rgba(0,0,0,0.65);
     animation: 1000ms ease-out 0s 1 fadeIn2;
 }
 
@@ -235,7 +237,10 @@ Triangular arrow punch-out at the bottom of the header
 }
 .SectionOuter {
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+}
+.SectionOuter:nth-last-child(2) .SectionWrapper {
+    border: none;
 }
 .SectionWrapper {
     position: relative;
@@ -323,7 +328,10 @@ Triangular arrow punch-out at the bottom of the header
 }
 .SectionText {
     margin-top: 10px;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: rgba(0,0,0,0.65)
 }
 .Face {
     position: absolute;
@@ -529,4 +537,3 @@ Media queries
         width: 100%;
     }
 }
-
