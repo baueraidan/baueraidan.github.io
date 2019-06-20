@@ -29,16 +29,17 @@ Navigation bar
 */
 
 .NavigationBar {
+    margin: 0;
     z-index: 1;
     width: 100%;
     position: absolute;
     box-sizing: border-box;
     overflow: auto;
-    background-color: rgba(255,255,255,0.0);
+    background-color: rgba(255,255,255,0.3);
     transition: background-color 200ms;
 }
 .NavigationBar:hover {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.4);
 }
 .NavigationItem {
     height: 100%;
@@ -90,7 +91,7 @@ Header section
 
 .HeaderContent {
     position: absolute;
-    top: 45%;
+    top: 46%;
     left: 50%;
     width: 400px;
     padding: 40px;
@@ -291,21 +292,21 @@ Triangular arrow punch-out at the bottom of the header
     padding-top: 25px;
     padding-bottom: 10px;
 }
-.ButtonWrapper a {
+.LinkButton {
     border: 1px solid #192a56;
-    background-color: transparent;
-    color: #192a56;
     font-size: 14px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-radius: 20px;
     display: inline-block;
-    padding: 3px 15px;
+    padding: 4px 20px;
     cursor: pointer;
-    margin: 5px 3px;
-}
-.ButtonWrapper a:hover {
-    color: #fff;
+    margin: 5px 5px;
     background-color: #192a56;
+    color: #fff;
+}
+.LinkButton:hover {
+    color: #192a56;
+    background-color: #fff;
 }
 
 .SectionTitle {
