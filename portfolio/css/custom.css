@@ -283,6 +283,11 @@ Triangular arrow punch-out at the bottom of the header
     padding: 20px 30px 60px 30px;
     width: 60%;
 }
+.AboutMeBlurb {
+    background-color: rgba(255,255,255,0);
+    transition: background-color 200ms;
+    border-radius: 25px 25px 0 0;
+}
 
 
 
@@ -539,5 +544,8 @@ Media queries
     }
     .ResumeColumnRight {
         width: 100%;
+    }
+    .AboutMeBlurb {
+        background-color: rgba(255,255,255,0.85);
     }
 }
