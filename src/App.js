@@ -9,10 +9,80 @@ import projects from './projects'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
+class Nav extends PureComponent {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      scrollY: 0
+    }
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+  handleScroll() {
+    this.setState({ scrollY: window.scrollY })
+  }
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll, false)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll, false)
+  }
+
+  render() {
+    return (
+      <nav
+        className="Navigation"
+        style={{
+          backgroundColor: `rgba(255,255,255,${this.state.scrollY <= 0 ? 0 : 0.95 })`
+        }}
+      >
+        <div className="NavigationInner">
+          <a
+            href="/"
+            style={{
+              fontWeight: 800,
+              textDecoration: 'none',
+              color: '#4b7bec',
+              fontSize: '14pt',
+              marginLeft: '15px',
+            }}
+          >
+            <span>A</span>
+            <div
+              className="CollapsedName"
+              style={{ maxWidth: this.state.scrollY <= 0 ? '0px' : '60px' }}
+            >idan&nbsp;</div>
+            <span>B</span>
+            <div
+              className="CollapsedName"
+              style={{ maxWidth: this.state.scrollY <= 0 ? '0px' : '60px' }}
+            >auer</div>
+          </a>
+          <div
+            style={{
+              flexGrow: 1,
+              display: 'flex',
+              justifyContent: 'flex-end',
+              alignItems: 'center'
+            }}
+          >
+            <a className="NavigationLink" href="https://www.linkedin.com/in/aidanbauer/" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+            <a className="NavigationLink" href="/Résumé.pdf" target="_blank" rel="noreferrer">
+              Résumé
+            </a>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+}
+
 function Header() {
   return (
-    <div className="HeaderWrapper">
-      <header className="Header">
+    <section className="HeaderWrapper">
+      <div className="Header">
         <div className="HeaderContent">
           <div className="HeaderLeft">
             <h1 className="Title">Aidan Bauer</h1>
@@ -38,15 +108,15 @@ function Header() {
           </div>
 
         </div>
-      </header>
+      </div>
       <img src={wave1} alt="Wave" />
-    </div>
+    </section>
   )
 }
 
 function Project(props) {
   return (
-    <div
+    <section
       className="Project"
       style={{ backgroundColor: props.index % 2 === 0 ? '#FFF' : '#F6F7FB' }}
     >
@@ -76,7 +146,7 @@ function Project(props) {
           {props.text.map((text, index) => (
             <p key={index} className="Content">{text}</p>
           ))}
-          <h3 className="ProjectTechnologies">Made with {props.technologies.join(', ')}</h3>
+          <p className="ProjectTechnologies">Created with {props.technologies.join(', ')}</p>
           {props.buttons && props.buttons.map((button, index) => (
             <a href={button.url} key={index} target="_blank" rel="noreferrer">
               <button className="Button">{button.label}</button>
@@ -94,81 +164,29 @@ function Project(props) {
           pointerEvents: 'none',
         }}
       />
-    </div>
+    </section>
+  )
+}
+
+function Footer() {
+  return (
+    <footer className="Footer">
+      <span>Made with </span>
+      <span style={{ margin: '0 2px' }}><FontAwesomeIcon icon={faHeart} /></span>
+      <span> by </span>
+      <a href="/" style={{ fontWeight: 'bold', color: 'inherit', textDecoration: 'none' }}>Aidan Bauer</a>
+      <span> in Boston, MA</span>
+    </footer>
   )
 }
 
 class App extends PureComponent {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      scrollY: 0
-    }
-    this.handleScroll = this.handleScroll.bind(this)
-  }
-  handleScroll() {
-    this.setState({ scrollY: window.scrollY })
-  }
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll, false)
-  }
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll, false)
-  }
-
   render() {
     return (
       <div className="App">
-
-        <div
-          className="Navigation"
-          style={{
-            backgroundColor: `rgba(255,255,255,${this.state.scrollY <= 0 ? 0 : 0.95 })`
-          }}
-        >
-          <div className="NavigationInner">
-            <a
-              href="/"
-              style={{
-                fontWeight: 800,
-                textDecoration: 'none',
-                color: '#4b7bec',
-                fontSize: '14pt',
-                marginLeft: '15px',
-              }}
-            >
-              <span>A</span>
-              <div
-                className="CollapsedName"
-                style={{ maxWidth: this.state.scrollY <= 0 ? '0px' : '60px' }}
-              >idan&nbsp;</div>
-              <span>B</span>
-              <div
-                className="CollapsedName"
-                style={{ maxWidth: this.state.scrollY <= 0 ? '0px' : '60px' }}
-              >auer</div>
-            </a>
-            <div
-              style={{
-                flexGrow: 1,
-                display: 'flex',
-                justifyContent: 'flex-end',
-                alignItems: 'center'
-              }}
-            >
-              <a className="NavigationLink" href="https://www.linkedin.com/in/aidanbauer/" target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a className="NavigationLink" href="/Résumé.pdf" target="_blank" rel="noreferrer">
-                Résumé
-              </a>
-            </div>
-          </div>
-        </div>
-
+        <Nav />
         <Header />
-
         {projects.map((project, index) => (
           <Project
             key={index}
@@ -183,22 +201,7 @@ class App extends PureComponent {
             technologies={project.technologies}
           />
         ))}
-
-        <div
-          style={{
-            padding: '10px 25px 20px 25px',
-            textAlign: 'center',
-            backgroundColor: '#F6F7FB',
-            fontSize: '11pt'
-          }}
-        >
-          <span>Made with </span>
-          <span style={{ margin: '0 2px' }}><FontAwesomeIcon icon={faHeart} /></span>
-          <span> by </span>
-          <a href="/" style={{ fontWeight: 'bold', color: 'inherit', textDecoration: 'none' }}>Aidan Bauer</a>
-          <span> in Boston, MA</span>
-        </div>
-
+        <Footer />
       </div>
     );
   }

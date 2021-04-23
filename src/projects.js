@@ -121,7 +121,7 @@ const projects = [
     ],
     imgSrc: 'media/mandelbrot.png',
     text: [
-      'The Mandelbrot Set is a beautiful fractal that exists in the complex number plane. This is an interactive visualization I coded for it, which allows you to click and drag to zoom in and explore its famous patterns. My visualization is different than the ones I’ve seen because it computes and draws the fractal in real-time in the browser.'
+      'The Mandelbrot Set is a beautiful fractal that exists in the complex number plane. This is an interactive visualization I coded for it, which allows you to click and drag to zoom in and explore its famous patterns. My visualization is different from the ones I’ve seen because it computes and draws the fractal in real-time in the browser.'
     ],
     technologies: ['JavaScript', 'HTML/CSS']
   },

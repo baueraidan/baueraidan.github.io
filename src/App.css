@@ -197,6 +197,12 @@
   display: inline-block;
   transition: max-width 200ms;
 }
+.Footer {
+  padding: 10px 25px 20px 25px;
+  text-align: center;
+  background-color: #F6F7FB;
+  font-size: 11pt;
+}
  
 @media only screen and (max-width: 720px) {
   .Portrait {
