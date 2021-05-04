@@ -60,18 +60,6 @@ const projects = [
     technologies: ['JavaScript', 'React', 'Cordova']
   },
   {
-    //title: 'Untitled',
-    platforms: ['iOS', 'Android'],
-    subtitle: 'A cute casual puzzle game',
-    videoSrc: 'media/untitled.mp4',
-    imgSrc: 'A cute puzzle game',
-    text: [
-      'This is a puzzle game I worked on a couple years ago to challenge myself more with art and design.',
-      'Players can slide the cute tiles around the board to pop groups of 3 or more adjacent tiles. Certain tiles have special abilities, like clearing an entire row or column, or eliminating all tiles of a certain color. Levels become increasingly more complicated and difficult to clear.'
-    ],
-    technologies: ['JavaScript', 'React', 'Cordova']
-  },
-  {
     title: 'Slipslot',
     platforms: ['iOS', 'Android'],
     subtitle: 'A brain-teasing puzzle game',
@@ -151,6 +139,18 @@ const projects = [
       'The Ideal Gas Law models the pressure of a gas in a container, given its volume, temperature, and amount of particles. You can play around with these values using the sliders at the top of the page, and see how they affect the animated visualization of the particles.'
     ],
     technologies: ['JavaScript', 'Three.js', 'HTML/CSS']
+  },
+  {
+    //title: 'Untitled',
+    platforms: ['iOS', 'Android'],
+    subtitle: 'A cute casual puzzle game',
+    videoSrc: 'media/untitled.mp4',
+    imgSrc: 'A cute puzzle game',
+    text: [
+      'This is a puzzle game I worked on a couple years ago to challenge myself more with art and design.',
+      'Players can slide the cute tiles around the board to pop groups of 3 or more adjacent tiles. Certain tiles have special abilities, like clearing an entire row or column, or eliminating all tiles of a certain color. Levels become increasingly more complicated and difficult to clear.'
+    ],
+    technologies: ['JavaScript', 'React', 'Cordova']
   },
 ]
 
