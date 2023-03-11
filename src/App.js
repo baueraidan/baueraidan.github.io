@@ -69,9 +69,6 @@ class Nav extends PureComponent {
             <a className="NavigationLink" href="https://www.linkedin.com/in/aidanbauer/" target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a className="NavigationLink" href="/Résumé.pdf" target="_blank" rel="noreferrer">
-              Résumé
-            </a>
           </div>
         </div>
       </nav>
@@ -87,7 +84,7 @@ function Header() {
           <div className="HeaderLeft">
             <h1 className="Title">Aidan Bauer</h1>
             <p className="Content">
-              Hi, I'm Aidan! I'm a junior at Tufts University studying computer science. I develop full-stack apps in React and React Native, and machine learning applications in Python.
+              Hi, I'm Aidan! I'm a software engineer at SpaceX building the Starlink mobile app. I mostly develop full-stack apps in React and React Native, and machine learning applications in Python.
             </p>
             <a href="mailto:contact@aidanbauer.me" target="_blank" rel="noreferrer">
               <button className="Button">Contact</button>
@@ -175,7 +172,7 @@ function Footer() {
       <span style={{ margin: '0 2px' }}><FontAwesomeIcon icon={faHeart} /></span>
       <span> by </span>
       <a href="/" style={{ fontWeight: 'bold', color: 'inherit', textDecoration: 'none' }}>Aidan Bauer</a>
-      <span> in Boston, MA</span>
+      <span> in Seattle, WA</span>
     </footer>
   )
 }
