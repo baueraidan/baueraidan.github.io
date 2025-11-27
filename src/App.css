@@ -25,36 +25,39 @@
   flex-grow: 1;
   display: flex;
   flex-direction: row;
+  align-items: center;
   overflow: visible;
 }
 
 .Portrait {
   mask-border: url(assets/blob.png);
   width: 320px;
-  transition: width 150ms;
+  opacity: 0;
+  /* transition: width 150ms; */
 }
 
 .HeaderLeft {
   position: relative;
-  flex-grow: 1;
   padding: 25px 20px;
+  flex-grow: 1;
 }
 .HeaderRight {
-  flex-grow: 1;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
   position: relative;
+  width: 420px;
+  height: 420px;
 }
 .BackgroundBlob {
   position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 0;
-  width: 530px;
-  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+  opacity: 0.10;
 }
 
 .ProjectTitle {

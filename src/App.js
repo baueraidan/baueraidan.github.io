@@ -3,8 +3,8 @@ import './App.css';
 import wave1 from './assets/wave1.svg';
 import wave2 from './assets/wave2.svg';
 import wave3 from './assets/wave3.svg';
-import backgroundBlob from './assets/background-blob.svg'
-import me from './media/me.jpg';
+import backgroundBlob1 from './assets/blob1.svg';
+import backgroundBlob2 from './assets/blob2.svg';
 import projects from './projects'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
@@ -91,12 +91,12 @@ function Header() {
           <div className="HeaderRight">
             <img
               className="BackgroundBlob"
-              src={backgroundBlob}
+              src={backgroundBlob1}
               alt='Aidan Bauer'
             />
             <img
-              className="Portrait"
-              src={me}
+              className="BackgroundBlob"
+              src={backgroundBlob2}
               alt='Aidan Bauer'
             />
           </div>
