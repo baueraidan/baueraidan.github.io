@@ -1,1 +1,0 @@
-Welcome to my web portfolio! Most of the projects here are ≥5 years old, from an era where I had more free time. Nowadays I'm at SpaceX, working on the Starlink mobile app and Starlink.com experience.

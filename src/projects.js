@@ -29,12 +29,6 @@ const projects = [
     title: 'Rentingway',
     platforms: ['Web', 'iOS', 'Android'],
     subtitle: 'A rental management platform',
-    buttons: [
-      { label: 'Web', url: 'https://rentingway.com/' },
-      { label: 'iOS', url: 'https://apps.apple.com/us/app/rentingway/id1492505360' },
-      { label: 'Android', url: 'https://play.google.com/store/apps/details?id=com.rentingway.android&hl=en_US&gl=US' },
-
-    ],
     imgSrc: 'media/rentingway.png',
     text: [
       'Rentingway is a small Boston-based startup I worked at for two years as the Lead Frontend Developer. In that time I created their website and mobile app, including a property management dashboard for landlords, tenant-to-landlord instant messaging, a social media platform, account registration, and a landing page with marketing material.'
@@ -45,11 +39,6 @@ const projects = [
     title: 'Word Surge',
     platforms: ['Web', 'iOS', 'Android'],
     subtitle: 'A game about forming words and clearing levels',
-    buttons: [
-      { label: 'Web', url: 'https://www.word-surge.com/' },
-      { label: 'iOS', url: 'https://apps.apple.com/vn/app/word-surge/id1465428508' },
-      { label: 'Android', url: 'https://play.google.com/store/apps/details?id=com.aidan.WordSurgeCompliant&hl=en_US&gl=US' }
-    ],
     videoSrc: 'media/word-surge.mp4',
     imgSrc: 'media/word-surge.png',
     text: [
@@ -75,9 +64,6 @@ const projects = [
     title: 'Unjumble',
     platforms: ['iOS', 'Android'],
     subtitle: 'A puzzle game about tying up loose ends',
-    buttons: [
-      { label: 'iOS', url: 'https://apps.apple.com/us/app/unjumble-puzzle/id1169456998' },
-    ],
     videoSrc: 'media/unjumble.mp4',
     imgSrc: 'media/unjumble.png',
     text: [
@@ -90,9 +76,6 @@ const projects = [
     title: 'Traveling Salesman',
     platforms: ['Web'],
     subtitle: 'An animated and interactive solution to the classic problem',
-    buttons: [
-      { label: 'Web', url: '/traveling-salesman' },
-    ],
     imgSrc: 'media/traveling-salesman.png',
     text: [
       'The Traveling Salesman Problem poses a natural question: "What\'s the quickest way to get from point A to point B, and 1,000 points in-between?" It seems like a computer would be good at solving a problem like this—just check every possible route and see which is the shortest.',
@@ -104,9 +87,6 @@ const projects = [
     title: 'Mandelbrot Set',
     platforms: ['Web'],
     subtitle: 'An interactive visualization of the famous fractal',
-    buttons: [
-      { label: 'Web', url: '/mandelbrot' },
-    ],
     imgSrc: 'media/mandelbrot.png',
     text: [
       'The Mandelbrot Set is a beautiful fractal that exists in the complex number plane. This is an interactive visualization I coded for it, which allows you to click and drag to zoom in and explore its famous patterns. My visualization is different from the ones I’ve seen because it computes and draws the fractal in real-time in the browser.'
@@ -117,9 +97,6 @@ const projects = [
     title: 'Electron Orbitals',
     platforms: ['Web'],
     subtitle: 'An interactive visualization of electron orbitals',
-    buttons: [
-      { label: 'Web', url: '/electron-orbitals' },
-    ],
     imgSrc: 'media/electron-orbitals.png',
     text: [
       'This visualization was my foray into real-time 3D modeling. It uses the Schrödinger equation to create 3-dimensional models for various electron orbitals. You can use the controls at the top of the page to view different orbitals, and to change the appearance and detail of the model. Scroll or pinch to zoom, and drag to pan around.'
@@ -130,9 +107,6 @@ const projects = [
     title: 'Ideal Gas Law',
     platforms: ['Web'],
     subtitle: 'An interactive visualization of the ideal gas law',
-    buttons: [
-      { label: 'Web', url: '/ideal-gas-law' },
-    ],
     videoSrc: 'media/ideal-gas-law.mp4',
     imgSrc: 'media/ideal-gas-law.png',
     text: [
@@ -141,7 +115,6 @@ const projects = [
     technologies: ['JavaScript', 'Three.js', 'HTML/CSS']
   },
   {
-    //title: 'Untitled',
     platforms: ['iOS', 'Android'],
     subtitle: 'A cute casual puzzle game',
     videoSrc: 'media/untitled.mp4',

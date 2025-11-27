@@ -84,11 +84,8 @@ function Header() {
           <div className="HeaderLeft">
             <h1 className="Title">Aidan Bauer</h1>
             <p className="Content">
-              Hi, I'm Aidan! I'm a software engineer at SpaceX building the Starlink mobile app. I mostly develop full-stack apps in React and React Native, and machine learning applications in Python.
+            Hi, I’m Aidan. I’m an engineer at SpaceX working on the Starlink mobile app and Starlink.com user experience. These are some of my hobby projects. :-)
             </p>
-            <a href="mailto:contact@aidanbauer.me" target="_blank" rel="noreferrer">
-              <button className="Button">Contact</button>
-            </a>
           </div>
 
           <div className="HeaderRight">
@@ -144,11 +141,6 @@ function Project(props) {
             <p key={index} className="Content">{text}</p>
           ))}
           <p className="ProjectTechnologies">Created with {props.technologies.join(', ')}</p>
-          {props.buttons && props.buttons.map((button, index) => (
-            <a href={button.url} key={index} target="_blank" rel="noreferrer">
-              <button className="Button">{button.label}</button>
-            </a>
-          ))}
         </div>
       </div>
 
