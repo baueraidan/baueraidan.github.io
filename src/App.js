@@ -42,7 +42,7 @@ class Nav extends PureComponent {
             style={{
               fontWeight: 800,
               textDecoration: 'none',
-              color: '#4b7bec',
+              color: '#5e858f',
               fontSize: '14pt',
               marginLeft: '15px',
             }}
