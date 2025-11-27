@@ -214,6 +214,9 @@
   .HeaderContent {
     flex-direction: column-reverse;
   }
+  .HeaderRight {
+    display: none;
+  }
   .BackgroundBlob {
     width: 420px;
   }
